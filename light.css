@@ -1,0 +1,147 @@
+/* body{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.container{
+    height: 400px;
+    width:100px;
+    border:1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:70px;
+    align-items: center;
+    background-color: black;
+    justify-self: center;
+    margin-top: 50px;
+    box-shadow: 15px 15px 5px 5px black;
+    
+}
+.box{
+    height:70px;
+    width:70px;
+    border:1px solid black;
+    border-radius: 50%;
+    
+    
+}
+.red{
+    animation:red-cng 3s ease-in 1s 4 alternate;
+    filter:drop-shadow(5px 5px red);
+}
+@keyframes red-cng {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: red;
+    }
+}
+.yellow{
+    animation:yellow-cng 3s ease-in 5s 4 alternate;
+    filter: drop-shadow(5px 5px yellow);
+}
+@keyframes yellow-cng {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color:yellow;
+    }
+}
+.green{
+    animation:green-cng 3s ease-in 10s 4 alternate;
+    filter: drop-shadow(5px 5px green);
+}
+@keyframes green-cng {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color:green;
+    }
+}
+     */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 260px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.box {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: black;
+    transition: background-color 0.5s;
+}
+
+.red-light.active {
+    animation: redLight 9s infinite;
+}
+
+.yellow-light.active {
+    animation: yellowLight 9s infinite;
+}
+
+.green-light.active {
+    animation: greenLight 9s infinite;
+}
+
+@keyframes redLight {
+
+    0%,
+    33% {
+        background-color: red;
+    }
+
+    34%,
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes yellowLight {
+
+    34%,
+    66% {
+        background-color: yellow;
+    }
+
+    0%,
+    33%,
+    67%,
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes greenLight {
+
+    67%,
+    100% {
+        background-color: green;
+    }
+
+    0%,
+    66% {
+        background-color: black;
+    }
+}
